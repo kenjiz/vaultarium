@@ -1,0 +1,41 @@
+name: vaultarium
+description: "My personal portfolio manager"
+publish_to: "none"
+
+version: 0.0.1+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  go_router: ^14.8.1
+  flex_seed_scheme: ^3.5.1
+  flutter_bloc: ^9.1.0
+  shared_utilities:
+    git:
+      url: https://github.com/kenjiz/shared_utilities.git
+      ref: main
+  ui_components:
+    git:
+      url: https://github.com/kenjiz/ui_components.git
+      ref: main
+  freezed_annotation: ^3.0.0
+  json_annotation: ^4.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+  freezed: ^3.0.4
+  build_runner: ^2.4.15
+  json_serializable: ^6.9.4
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
