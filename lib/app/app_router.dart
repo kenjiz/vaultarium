@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:vaultarium/auth/views/login_page.dart';
+import 'package:vaultarium/dashboard/views/dashboard.dart';
 import 'package:vaultarium/error/views/error_page.dart';
 import 'package:vaultarium/home/views/home_page.dart';
 import 'package:vaultarium/notifications/flashbar/views/flashbar_page.dart';
@@ -13,6 +14,7 @@ import 'package:vaultarium/portfolio/views/portfolio_view_page.dart';
 
 final mainNavKey = GlobalKey<NavigatorState>();
 final flashbarNavKey = GlobalKey<NavigatorState>();
+final dashboardNavKey = GlobalKey<StatefulNavigationShellState>();
 
 class AppRouter {
   static const String home = '/';
@@ -38,48 +40,59 @@ class AppRouter {
           pageBuilder:
               (context, state) => MaterialPage(child: const LoginPage()),
         ),
-        GoRoute(
-          path: portfolio,
-          name: portfolio,
-          pageBuilder:
-              (context, state) => MaterialPage(child: const PortfolioPage()),
-          routes: [
-            GoRoute(
-              path: portfolioDetails,
-              name: portfolioDetails,
-              pageBuilder:
-                  (context, state) => MaterialPage(
-                    child: PortfolioDetailsPage(
-                      portfolioId: state.pathParameters['portfolioId']!,
+        StatefulShellRoute.indexedStack(
+          key: dashboardNavKey,
+          builder: (_, _, child) => DashboardPage(navigationShell: child),
+          branches: [
+            StatefulShellBranch(
+              routes: [
+                GoRoute(
+                  path: portfolio,
+                  name: portfolio,
+                  pageBuilder:
+                      (context, state) =>
+                          MaterialPage(child: const PortfolioPage()),
+                  routes: [
+                    GoRoute(
+                      path: portfolioDetails,
+                      name: portfolioDetails,
+                      pageBuilder:
+                          (context, state) => MaterialPage(
+                            child: PortfolioDetailsPage(
+                              portfolioId: state.pathParameters['portfolioId']!,
+                            ),
+                          ),
                     ),
-                  ),
-            ),
-            GoRoute(
-              path: portfolioCreate,
-              name: portfolioCreate,
-              pageBuilder:
-                  (context, state) =>
-                      MaterialPage(child: PortfolioCreatePage()),
-            ),
-            GoRoute(
-              path: portfolioEdit,
-              name: portfolioEdit,
-              pageBuilder:
-                  (context, state) => MaterialPage(
-                    child: PortfolioEditPage(
-                      portfolioId: state.pathParameters['portfolioId']!,
+                    GoRoute(
+                      path: portfolioCreate,
+                      name: portfolioCreate,
+                      pageBuilder:
+                          (context, state) =>
+                              MaterialPage(child: PortfolioCreatePage()),
                     ),
-                  ),
-            ),
-            GoRoute(
-              path: portfolioView,
-              name: portfolioView,
-              pageBuilder:
-                  (context, state) => MaterialPage(
-                    child: PortfolioViewPage(
-                      portfolioId: state.pathParameters['portfolioId']!,
+                    GoRoute(
+                      path: portfolioEdit,
+                      name: portfolioEdit,
+                      pageBuilder:
+                          (context, state) => MaterialPage(
+                            child: PortfolioEditPage(
+                              portfolioId: state.pathParameters['portfolioId']!,
+                            ),
+                          ),
                     ),
-                  ),
+                    GoRoute(
+                      path: portfolioView,
+                      name: portfolioView,
+                      pageBuilder:
+                          (context, state) => MaterialPage(
+                            child: PortfolioViewPage(
+                              portfolioId: state.pathParameters['portfolioId']!,
+                            ),
+                          ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ],
         ),
