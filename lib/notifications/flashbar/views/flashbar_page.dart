@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ui_components/ui_components.dart';
-import 'package:vaultarium/app/app_router.dart';
+import 'package:vaultarium/core/app_router.dart';
 import 'package:vaultarium/notifications/flashbar/cubit/flashbar_cubit.dart';
 import 'package:vaultarium/notifications/flashbar/cubit/flashbar_state.dart';
 import 'package:vaultarium/notifications/flashbar/models/flashbar_type.dart';

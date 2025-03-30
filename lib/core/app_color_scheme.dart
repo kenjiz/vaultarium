@@ -1,6 +1,6 @@
 import 'package:flex_seed_scheme/flex_seed_scheme.dart';
 import 'package:flutter/material.dart';
-import 'package:vaultarium/app/seed_colors.dart';
+import 'package:vaultarium/core/seed_colors.dart';
 
 final ColorScheme schemeLight = SeedColorScheme.fromSeeds(
   brightness: Brightness.light,

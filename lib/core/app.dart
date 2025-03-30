@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:vaultarium/app/app_provider.dart';
-import 'package:vaultarium/app/app_router.dart';
-import 'package:vaultarium/app/app_theme.dart';
+import 'package:vaultarium/core/app_provider.dart';
+import 'package:vaultarium/core/app_router.dart';
+import 'package:vaultarium/core/app_theme.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

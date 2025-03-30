@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ui_components/button/theme/button_theme.dart';
 import 'package:ui_components/fields/theme/field_theme.dart';
 import 'package:ui_components/flashbar/theme/flashbar_theme.dart';
-import 'package:vaultarium/app/app_color_scheme.dart';
-import 'package:vaultarium/app/seed_colors.dart';
+import 'package:vaultarium/core/app_color_scheme.dart';
+import 'package:vaultarium/core/seed_colors.dart';
 
 // TODO: add customization later
 class AppTheme {

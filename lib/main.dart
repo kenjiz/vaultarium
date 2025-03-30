@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vaultarium/app/app.dart';
+import 'package:vaultarium/core/app.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

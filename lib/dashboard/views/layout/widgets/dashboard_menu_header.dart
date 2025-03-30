@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vaultarium/app/seed_colors.dart';
+import 'package:vaultarium/core/seed_colors.dart';
 import 'package:vaultarium/dashboard/views/layout/widgets/app_name.dart';
 
 class DashboardMenuHeader extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ui_components/ui_components.dart';
-import 'package:vaultarium/app/app_router.dart';
+import 'package:vaultarium/core/app_router.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
