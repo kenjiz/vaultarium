@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vaultarium/dashboard/views/layout/widgets/app_name.dart';
+import 'package:vaultarium/features/dashboard/views/layout/widgets/app_name.dart';
 
 class DashboardMenuHeader extends StatelessWidget {
   const DashboardMenuHeader({super.key});

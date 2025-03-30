@@ -1,16 +1,16 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:vaultarium/auth/views/login_page.dart';
-import 'package:vaultarium/dashboard/views/dashboard.dart';
-import 'package:vaultarium/error/views/error_page.dart';
-import 'package:vaultarium/home/views/home_page.dart';
-import 'package:vaultarium/notifications/flashbar/views/flashbar_page.dart';
-import 'package:vaultarium/portfolio/views/porfolio_page.dart';
-import 'package:vaultarium/portfolio/views/portfolio_create_page.dart';
-import 'package:vaultarium/portfolio/views/portfolio_details_page.dart';
-import 'package:vaultarium/portfolio/views/portfolio_edit_page.dart';
-import 'package:vaultarium/portfolio/views/portfolio_view_page.dart';
+import 'package:vaultarium/features/auth/views/login_page.dart';
+import 'package:vaultarium/features/dashboard/views/dashboard.dart';
+import 'package:vaultarium/features/error/views/error_page.dart';
+import 'package:vaultarium/features/home/views/home_page.dart';
+import 'package:vaultarium/features/notifications/flashbar/views/flashbar_page.dart';
+import 'package:vaultarium/features/portfolio/views/porfolio_page.dart';
+import 'package:vaultarium/features/portfolio/views/portfolio_create_page.dart';
+import 'package:vaultarium/features/portfolio/views/portfolio_details_page.dart';
+import 'package:vaultarium/features/portfolio/views/portfolio_edit_page.dart';
+import 'package:vaultarium/features/portfolio/views/portfolio_view_page.dart';
 
 final mainNavKey = GlobalKey<NavigatorState>();
 final flashbarNavKey = GlobalKey<NavigatorState>();

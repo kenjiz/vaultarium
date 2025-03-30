@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_components/ui_components.dart';
-import 'package:vaultarium/auth/views/widges/login_form.dart';
+import 'package:vaultarium/features/auth/views/widges/login_form.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});

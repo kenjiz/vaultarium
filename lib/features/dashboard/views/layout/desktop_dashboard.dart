@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ui_components/ui_components.dart';
-import 'package:vaultarium/dashboard/views/layout/widgets/desktop_side_menu.dart';
+import 'package:vaultarium/features/dashboard/views/layout/widgets/desktop_side_menu.dart';
 
 class DesktopDashboard extends StatefulWidget {
   const DesktopDashboard({required this.navigationShell, super.key});

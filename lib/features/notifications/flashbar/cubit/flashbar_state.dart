@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:vaultarium/notifications/flashbar/models/flashbar_type.dart';
+import 'package:vaultarium/features/notifications/flashbar/models/flashbar_type.dart';
 
 part 'flashbar_state.freezed.dart';
 

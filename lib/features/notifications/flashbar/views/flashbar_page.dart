@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ui_components/ui_components.dart';
 import 'package:vaultarium/core/app_router.dart';
-import 'package:vaultarium/notifications/flashbar/cubit/flashbar_cubit.dart';
-import 'package:vaultarium/notifications/flashbar/cubit/flashbar_state.dart';
-import 'package:vaultarium/notifications/flashbar/models/flashbar_type.dart';
+import 'package:vaultarium/features/notifications/flashbar/cubit/flashbar_cubit.dart';
+import 'package:vaultarium/features/notifications/flashbar/cubit/flashbar_state.dart';
+import 'package:vaultarium/features/notifications/flashbar/models/flashbar_type.dart';
 
 class FlashbarPage extends StatelessWidget {
   const FlashbarPage({required this.child, super.key});

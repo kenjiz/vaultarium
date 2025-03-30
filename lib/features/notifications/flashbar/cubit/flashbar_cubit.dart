@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vaultarium/notifications/flashbar/cubit/flashbar_state.dart';
-import 'package:vaultarium/notifications/flashbar/models/flashbar_type.dart';
+import 'package:vaultarium/features/notifications/flashbar/cubit/flashbar_state.dart';
+import 'package:vaultarium/features/notifications/flashbar/models/flashbar_type.dart';
 
 class FlashbarCubit extends Cubit<FlashbarState> {
   FlashbarCubit() : super(const FlashbarState());
