@@ -1,10 +1,13 @@
 name: PR workflow
 
 on:
+  workflow_dispatch:
   pull_request:
-    branches:
-      - main
-      - develop
+    types: [ opened, synchronize, reopened, ready_for_review ]
+    branches: [ develop, v* ]
+
+  permissions:
+    pull-requests: write
 
 jobs:
   build:
