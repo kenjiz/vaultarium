@@ -1,0 +1,17 @@
+name: PR workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Flutter Install
+        uses: ./github/actions/install
+
+      - name: Flutter Analyzer
+        uses: ./github/actions/analyze
