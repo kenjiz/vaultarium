@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Flutter Install
-        uses: .github/actions/install
+        uses: ./github/actions/install
 
       - name: Flutter Analyzer
-        uses: .github/actions/analyze
+        uses: ./github/actions/analyze
       # TODO: add test
 
       - name: Update App Version
-        uses: .github/actions/update_app_version
+        uses: ./github/actions/update_app_version
       
       - name: Flutter Build Web 
-        uses: .github/actions/build_web
+        uses: ./github/actions/build_web
