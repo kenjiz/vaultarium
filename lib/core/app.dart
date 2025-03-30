@@ -11,7 +11,7 @@ class App extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Vaultarium',
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.dark,
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
       routerConfig: AppRouter.router,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:vaultarium/core/seed_colors.dart';
 import 'package:vaultarium/dashboard/views/layout/widgets/app_name.dart';
 
 class DashboardMenuHeader extends StatelessWidget {
@@ -8,7 +7,7 @@ class DashboardMenuHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DrawerHeader(
-      decoration: BoxDecoration(color: SeedColors.primary),
+      decoration: BoxDecoration(color: Theme.of(context).colorScheme.primary),
       child: const AppName(inverted: true),
     );
   }
