@@ -1,0 +1,7 @@
+name: Flutter Build Web
+description: Checkout the codebase and build web
+runs:
+  using: "composite"
+  steps:
+    - name: Build web
+      run: flutter build web

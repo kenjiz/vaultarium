@@ -1,0 +1,15 @@
+name: Flutter Version Install
+description: Checkout the codebase and install flutter based on fvm config
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Read Flutter version to use
+      uses: kuhnroyal/flutter-fvm-config-action/setup@v3
+      id: fvm_config
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: ${{ steps.fvm_config.outputs.FLUTTER_VERSION }}
+  

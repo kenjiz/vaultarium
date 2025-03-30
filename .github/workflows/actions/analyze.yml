@@ -1,0 +1,9 @@
+name: Flutter Analyzer
+description: Runs the analyzer on the codebase
+runs:
+  using: "composite"
+  steps:
+    - name: Analyze Dart
+      uses: zgosalvez/github-actions-analyze-dart@v3
+    # TODO: add test
+  

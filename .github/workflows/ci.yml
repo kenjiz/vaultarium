@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  flutter-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Flutter Install
+        uses: .github/actions/install
+
+      - name: Flutter Analyzer
+        uses: .github/actions/analyze
+      # TODO: add test
+
+      - name: Update App Version
+        uses: .github/actions/update_app_version
+      
+      - name: Flutter Build Web 
+        uses: .github/actions/build_web

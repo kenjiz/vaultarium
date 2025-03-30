@@ -1,0 +1,25 @@
+name: Update App Version
+description: Get current pubspec.yaml version and update
+runs:
+  using: "composite"
+  steps:
+    - name: Flutter App Versioning
+    - run: |
+        echo "Updating app version..."
+        current_version=$(grep '^version:' pubspec.yaml | awk '{print $2}')
+
+        # Split the version into base and build number
+        base_version=$(echo "$current_version" | cut -d'+' -f1)
+        current_build_number=$(echo "$current_version" | cut -d'+' -f2)
+
+        # Use GitHub run number as the new build number
+        new_build_number="${{ github.run_number }}"
+
+        # Construct the new version
+        new_version="${base_version}+${new_build_number}"
+
+        # Update the pubspec.yaml file
+        sed -i "s/^version:.*/version: $new_version/" pubspec.yaml
+        echo "Updated version to $new_version"
+        cat pubspec.yaml | grep '^version:'
+      shell: bash
